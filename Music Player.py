@@ -11,15 +11,12 @@ from pygame import mixer
 import os
 
 color1 = "#ffffff"  # white
-# color2 = "#357EC7"  # blue
 color2 = "#FF8C00"  # orange
-
 color3 = "#000000"  # black
 color4 = "#FF0808"  # red
 
 window = Tk()
 window.title("Music Player")
-# window.geometry('550x350')
 window.geometry('800x500')
 window.config(background=color2)
 window.resizable(width=FALSE, height=FALSE)
@@ -99,9 +96,6 @@ def set_vol(val):
 
 # frames
 
-# left_frame = Frame(window, width=208, height=278, background=color3)
-# left_frame.grid(row=0, column=0, padx=0, pady=3)
-
 bottom_frame = Frame(window, width=800, height=500, background=color2)
 bottom_frame.grid(row=0, column=0, columnspan=3, padx=0, pady=0)
 
@@ -118,22 +112,6 @@ songcover = ImageTk.PhotoImage(songcover)
 songcoverimg = Label(bottom_frame, height=500, image=songcover,
                      padx=0, pady=0, bg=color3,  relief=SOLID)
 songcoverimg.grid(row=0, column=0)
-
-
-# elif index == 1:
-#     songcover = Image.open('icons/1.png')
-#     songcover = songcover.resize((204, 204))
-#     songcover = ImageTk.PhotoImage(songcover)
-#     songcoverimg = Label(left_frame, height=204, image=songcover,
-#                          padx=1, pady=1, bg=color3,  relief=SOLID)
-#     songcoverimg.grid(row=0, column=0)
-# elif index == 1:
-#     songcover = Image.open('icons/de1.png')
-#     songcover = songcover.resize((204, 204))
-#     songcover = ImageTk.PhotoImage(songcover)
-#     songcoverimg = Label(left_frame, height=204, image=songcover,
-#                          padx=1, pady=1, bg=color3,  relief=SOLID)
-#     songcoverimg.grid(row=0, column=0)
 
 
 # listbox
@@ -162,7 +140,7 @@ volume_label = Label(bottom_frame, text="VOLUME", font=(
     "David 12 bold"), width=10, height=1, padx=0, bg=color4, fg=color3)
 volume_label.place(x=674, y=393)
 
-credits_label = Label(bottom_frame, text="BY:\nIU2041220019\nIU2041220009\nIU2041220001", font=(
+credits_label = Label(bottom_frame, text="BY:\n   ", font=(    # here in this line you can give credits
     "David 10 bold"), width=12, height=4, padx=0, bg=color4, fg=color3)
 credits_label.place(x=28, y=388)
 
@@ -222,7 +200,7 @@ nextimg.place(x=587, y=392)
 # load the songs
 
 
-os.chdir(r'C:\Users\RYZEN\Downloads\Songs')
+os.chdir(r'') # put the file location of songs in between ''  , here i have my location as 'C:\Users\RYZEN\Downloads\Songs'
 songs = os.listdir()
 
 
